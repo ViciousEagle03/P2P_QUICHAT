@@ -19,6 +19,10 @@ Quichat is a small Go 1.24 program that lets you chat over the Internet withou
 
    ```bash
    git clone https://github.com/you/quichat.git
+   # Linux (Ubuntu/Debian)
+   sudo apt update && sudo apt install golang-go 
+   # macOS (Homebrew)
+   brew install go 
    cd quichat
    go mod tidy
    ```

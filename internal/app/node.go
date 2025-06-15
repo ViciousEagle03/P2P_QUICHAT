@@ -104,8 +104,7 @@ func (n *Node) connectBootstrapPeer() error {
 	if err != nil {
 		return fmt.Errorf("invalid bootstrap multiaddr %q: %w", n.bootstrapAddr, err)
 	}
-	dialCtx, cancel := context.WithTimeout(n.ctx, 20*time.Second)
-	fmt.Println(dialCtx)
+	dialCtx, cancel := context.WithTimeout(n.ctx, 60*time.Second)
 	defer cancel()
 
 	return n.Host.Connect(dialCtx, *info)

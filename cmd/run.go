@@ -4,7 +4,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/ViciousEagle03/P2P_Terminal_QUICHAT/internal/app"
+	"github.com/ViciousEagle03/P2P_QUICHAT/internal/app"
 	"github.com/spf13/cobra"
 )
 

@@ -1,4 +1,4 @@
-module github.com/ViciousEagle03/P2P_Terminal_QUICHAT
+module github.com/ViciousEagle03/P2P_QUICHAT
 
 go 1.24.4
 
