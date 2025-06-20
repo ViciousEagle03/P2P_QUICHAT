@@ -43,7 +43,7 @@ The following footage shows two QuickChat terminals running on separate devices 
 2. **Start a listener**
 
    ```bash
-   ./quichat . run --listen 4001 --nick alice
+   ./quichat run --listen 4001 --nick alice
    ```
    ***Example Output***
 
