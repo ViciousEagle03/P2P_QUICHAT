@@ -8,11 +8,24 @@ Quichat is a small Go 1.24 program that lets you chat over the Internet withou
 
 * **No central server** – each laptop calls the other directly. If that fails, they borrow a relay for the handshake and keep going.
 * **Modern transport** – QUIC‑v1 is the same tech under HTTP/3. Faster first handshake, built‑in multiplexing, and better luck with NATs.
+
+![](Demo_Video/quic_vs_tcp.gif)
+
 * **Plain terminal UI** – readline gives you history, Ctrl‑R search, and colours without a heavy GUI.
 * **One static binary** – `go build` produces a \~7 MB file that runs on any modern Linux, macOS, or Windows box. No config files, no database.
 
 ---
+### Demo Video
+The following footage shows two QuickChat terminals running on separate devices over two different WANs.
 
+ - Left: Linux machine
+
+ - Right: macOS machine
+
+![](Demo_Video/Demo_Quichat_diff_device_diff_LAN.gif)
+
+---
+ 
 ## Quick start
 
 1. **Build**
@@ -22,14 +35,15 @@ Quichat is a small Go 1.24 program that lets you chat over the Internet withou
    # Linux (Ubuntu/Debian)
    sudo apt update && sudo apt install golang-go 
    # macOS (Homebrew)
-   brew install go 
+   
    cd quichat
    go mod tidy
+   go build -o quichat .
    ```
 2. **Start a listener**
 
    ```bash
-   go run . run --listen 4001 --nick alice
+   ./quichat . run --listen 4001 --nick alice
    ```
    ***Example Output***
 
@@ -51,7 +65,7 @@ Quichat is a small Go 1.24 program that lets you chat over the Internet withou
 3. **Start a dialer** (new terminal or second machine)
 
    ```bash
-   ./go run --listen 4003 \
+   ./quichat run --listen 4003 \
                 --bootstrap "<multi‑addr‑from‑Alice>" \
                 --nick bob
    ```
