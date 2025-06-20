@@ -16,7 +16,7 @@ Quichat is a small Go 1.24 program that lets you chat over the Internet withou
 
 ---
 ### Demo Video
-The following footage shows two QuickChat terminals running on separate devices over two different WANs.
+The following footage shows two QuickChat terminals running on separate devices over two different LANs(It supports WAN also).
 
  - Left: Linux machine
 
